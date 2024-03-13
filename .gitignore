@@ -2,6 +2,9 @@
 /*.txt
 !requirements.txt
 
+# Tests report in tests folders
+tests/*.html
+
 # Environments
 .env
 .venv
