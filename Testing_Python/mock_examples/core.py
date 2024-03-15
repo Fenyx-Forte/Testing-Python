@@ -10,36 +10,51 @@ PI = 3.14159
 
 def area_of_circle(radius: float) -> float:
     """
-    Function to calculate area of a cicle
-    :param radius: Radius of the circle
-    :return: Area of the circle
+    Calculate the area of a circle.
+
+    Args:
+        radius (float): The radius of the circle.
+
+    Returns:
+        float: The area of the circle.
     """
     return PI * radius * radius
 
 
 def make_file(filename: str) -> None:
     """
-    Function to create a file
-    :param filename: Name of the file to create
-    :return: None
+    Create a file with the given filename.
+
+    Args:
+        filename (str): The name of the file to be created.
+
+    Returns:
+        None: This function does not return anything.
     """
-    with open(my_path.path(filename), "w") as f:
-        f.write("hello")
+    with open(my_path.path(filename), 'w') as f:
+        f.write('hello')
 
 
 def remove_file(filename: str) -> None:
     """
-    Function to remove a file
-    :param filename: Name of the file to remove
-    :return: None
+    Remove a file.
+
+    Args:
+        filename (str): The name of the file to remove.
+
+    Returns:
+        None: This function does not return anything.
     """
     os.remove(my_path.path(filename))
 
 
 def get_yo_mamma_jokes() -> Any | None:
     """
-    Function to get yo mamma jokes from an API
-    :return: Response from the API
+    Retrieves a joke from the Yo Mamma API.
+
+    Returns:
+        Union[dict, None]: A dictionary containing a joke, if successful.
+                          If the request fails, returns None.
     """
-    response = requests.get("https://api.yomomma.info/")
+    response = requests.get('https://api.yomomma.info/')
     return response.json()

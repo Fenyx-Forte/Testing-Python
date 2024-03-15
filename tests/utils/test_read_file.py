@@ -3,6 +3,7 @@ from Testing_Python.utils import read_file
 
 def test_read_file():
     """
-    Test that read_file returns the content of the file.
+    This test ensures that the function `read_file.read_file` returns the
+    content of the file specified.
     """
-    assert read_file.read_file("teste.txt") == "123"
+    assert read_file.read_file('resources/tests/test.txt') == '123'
